@@ -42,11 +42,7 @@ namespace RoadsideAssistanceService.Controllers
         {
             try
             {
-                //validate input coordinates
-                if(nearestAssistantsModel.CustomerLongitude == 0 || nearestAssistantsModel.CustomerLatitude == 0)
-                {
-                    return BadRequest("Invalid customer location");
-                }
+
                 var geoLocation = new Geolocation{ Longitude = nearestAssistantsModel.CustomerLongitude, Lattitude = nearestAssistantsModel.CustomerLatitude };
                 
                 //validate # of providers to return
