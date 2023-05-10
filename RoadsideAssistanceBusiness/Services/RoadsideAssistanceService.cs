@@ -68,7 +68,7 @@ namespace RoadsideAssistanceBusiness.Services
                             //explore the provider details
                             Id = agl.AssistantId,
                             ServiceProviderName = a.ServiceProviderName,
-                            Distance = agl.Distance,
+                            Distance = Math.Round(agl.Distance / 1609.34, 2),
                             Longitude = agl.Geolocation.Coordinate.X,
                             Latitude = agl.Geolocation.Coordinate.Y,
                             Phone = a.Phone,
